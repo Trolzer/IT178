@@ -4,17 +4,26 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class StudentDataReader {
 
-    public Student readDataFromFile(String filename){
+    public ArrayList<Student> readDataFromFile(String filename) {
 
+        ArrayList<Student> studentList = new ArrayList<Student>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filename));
             String line;
-            Student [] studentList = new Student[4];
-            while((line=reader.readLine())!=null){
-                
+            while ((line = reader.readLine()) != null) {
+                String[] arr = line.split("\\s");
+                try {
+                    Student newStudent = new Student(arr[0], Integer.parseInt(arr[1]));
+                    studentList.add(newStudent);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid Grade data!");
+                    System.out.println("Skipping " + "'" + arr[0] +" " + arr[1]+"'");
+                }
+
             }
 
         } catch (FileNotFoundException e) {
@@ -22,6 +31,8 @@ public class StudentDataReader {
         } catch (IOException e) {
             System.out.println("IO error!");
         }
+
+        return studentList;
 
     }
 

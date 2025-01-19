@@ -1,4 +1,6 @@
 John 97
 Bill 78
-Hannah 75
+Hannah 74
 Alex 90
+Frank 40
+Samantha 60
