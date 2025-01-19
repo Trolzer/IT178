@@ -33,15 +33,16 @@ public class StudentGradesAnalyzer {
 
         avgScore = ((float)total / studentList.size());
 
-        for (int i = 0; i < studentList.size(); i++){
-            for (int j = i+1; j < studentList.size(); j++){
-                String s1 = studentList.get(i).getName();
-                String s2 = studentList.get(j).getName();
-                if (s1.compareTo(s2) > 0){
-                    swap(studentList, i, j);
-                }
+        for (int i = 0; i < studentList.size()-1; i++){
+            int minIndex = i;
 
+            for (int j = i+1; j < studentList.size(); j++){
+                if (studentList.get(j).getName().compareTo(studentList.get(minIndex).getName()) < 0){
+                    minIndex = j;
+                }
             }
+            swap(studentList, minIndex, i);
+
         }
 
         System.out.print("Average Grade: ");
