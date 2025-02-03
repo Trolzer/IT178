@@ -22,9 +22,8 @@ public class Course {
 
     @Override
     public String toString() {
-        System.out.println("Course Information:");
-        System.out.println("Course Number: " + getCourseNumber());
-        System.out.println("Course Title: " + getCourseTitle());
-
+        return "Course Information: \n" +
+                "Course Number: " + getCourseNumber() + "\n" +
+                "Course Title: " + getCourseTitle() + "\n";
     }
 }

@@ -1,3 +1,5 @@
+package InheritanceLab;
+
 import java.util.Scanner;
 
 public class CourseInformation {
@@ -25,10 +27,17 @@ public class CourseInformation {
       classTime = scnr.nextLine();
 
 		//Call the appropriate set methods
-      myCourse.set
-	  
-	  
-      System.out.prinln(myOfferedCourse);
+      myCourse.setCourseNumber(courseNumber);
+      myCourse.setCourseTitle(courseTitle);
+
+      myOfferedCourse.setCourseNumber(oCourseNumber);
+      myOfferedCourse.setCourseNumber(oCourseNumber);
+      myOfferedCourse.setInstructorName(instructorName);
+      myOfferedCourse.setClassLocation(location);
+      myOfferedCourse.setClassTime(classTime);
+
+
+      System.out.println(myOfferedCourse);
 
       System.out.println("   Instructor Name: " + //fill in here);
       System.out.println("   Location: " + //fill in here);
