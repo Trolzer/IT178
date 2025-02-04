@@ -23,7 +23,7 @@ public class Course {
     @Override
     public String toString() {
         return "Course Information: \n" +
-                "Course Number: " + getCourseNumber() + "\n" +
-                "Course Title: " + getCourseTitle() + "\n";
+                "\tCourse Number: " + getCourseNumber() + "\n" +
+                "\tCourse Title: " + getCourseTitle();
     }
 }

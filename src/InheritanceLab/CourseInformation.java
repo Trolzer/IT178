@@ -31,16 +31,19 @@ public class CourseInformation {
       myCourse.setCourseTitle(courseTitle);
 
       myOfferedCourse.setCourseNumber(oCourseNumber);
-      myOfferedCourse.setCourseNumber(oCourseNumber);
+      myOfferedCourse.setCourseTitle(oCourseTitle);
       myOfferedCourse.setInstructorName(instructorName);
       myOfferedCourse.setClassLocation(location);
       myOfferedCourse.setClassTime(classTime);
 
 
+      System.out.println(myCourse);
+
+//      System.out.println("   Instructor Name: " + //fill in here);
+//      System.out.println("   Location: " + //fill in here);
+//      System.out.println("   Class Time: " + //fill in here);
+//      replaced above with comment section with following line
       System.out.println(myOfferedCourse);
 
-      System.out.println("   Instructor Name: " + //fill in here);
-      System.out.println("   Location: " + //fill in here);
-      System.out.println("   Class Time: " + //fill in here);
    }
 }

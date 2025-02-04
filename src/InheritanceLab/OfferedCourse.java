@@ -31,14 +31,14 @@ public class OfferedCourse extends Course{
     }
 
 
-    //old implementation
-//    @Override
-//    public String toString() {
-//        return "Course Information: \n" +
-//                "Course Number: " + getCourseNumber() + "\n" +
-//                "Course Title: " + getCourseTitle() + "\n" +
-//                "Instructor: " + getInstructorName() + "\n" +
-//                "Location: " + getClassLocation() + "\n" +
-//                "Class Time: " + getClassTime() + "\n";
-//    }
+
+    @Override
+    public String toString() {
+        return "Course Information: \n" +
+                "\tCourse Number: " + getCourseNumber() + "\n" +
+                "\tCourse Title: " + getCourseTitle() + "\n" +
+                "\tInstructor: " + getInstructorName() + "\n" +
+                "\tLocation: " + getClassLocation() + "\n" +
+                "\tClass Time: " + getClassTime();
+    }
 }
