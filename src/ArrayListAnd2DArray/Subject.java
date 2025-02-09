@@ -1,0 +1,52 @@
+package ArrayListAnd2DArray;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Subject {
+
+    private ArrayList<Integer> grades = new ArrayList<Integer>();
+    private String subjectName;
+
+    public Subject(String subjectName, int numberOfStudents) {
+        this.subjectName = subjectName;
+        for (int i = 0; i< numberOfStudents; i++){
+            grades.add(-1);
+        }
+
+    }
+
+    public int getLowestGrade() {
+        return Collections.min(grades);
+    }
+
+    public int getHighestGrade() {
+        return Collections.max(grades);
+    }
+
+    public float calculateAverage() {
+        int sum = 0;
+        for (int i = 0; i < grades.size(); i++) {
+            sum += grades.get(i);
+        }
+        return (float) sum / grades.size();
+    }
+
+    public void setGrades(int index, int grade) {
+        grades.set(index, grade);
+    }
+
+    public int getGrade(int index) {
+        return grades.get(index);
+    }
+
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+
+    @Override
+    public String toString() {
+        return getSubjectName();
+    }
+}
