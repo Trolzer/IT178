@@ -27,12 +27,12 @@ public class Subject {
     public float calculateAverage() {
         int sum = 0;
         for (int i = 0; i < grades.size(); i++) {
-            sum += grades.get(i);
+            sum += getGrade(i);
         }
         return (float) sum / grades.size();
     }
 
-    public void setGrades(int index, int grade) {
+    public void setGrade(int index, int grade) {
         grades.set(index, grade);
     }
 

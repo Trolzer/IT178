@@ -29,7 +29,7 @@ public class Student {
     public float calculateAverage(){
         int sum = 0;
         for (int i = 0; i < subjectGrades.size(); i++){
-            sum += subjectGrades.get(i);
+            sum += getGrade(i);
         }
         return (float) sum / subjectGrades.size();
     }
