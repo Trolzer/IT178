@@ -10,7 +10,7 @@ public class Subject {
 
     public Subject(String subjectName, int numberOfStudents) {
         this.subjectName = subjectName;
-        for (int i = 0; i< numberOfStudents; i++){
+        for (int i = 0; i< numberOfStudents; i++){ //fill with numberOfStudents amount of -1
             grades.add(-1);
         }
 
@@ -44,8 +44,7 @@ public class Subject {
         return subjectName;
     }
 
-
-    @Override
+    @Override//to make printing easier bc of needing to typecast in arrays with different types of object in them
     public String toString() {
         return getSubjectName();
     }

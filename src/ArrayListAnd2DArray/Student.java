@@ -1,7 +1,6 @@
 package ArrayListAnd2DArray;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Student {
 
@@ -10,7 +9,7 @@ public class Student {
 
     public Student(String name, int numberOfSubjects){
         this.name = name;
-        for (int i =0; i < numberOfSubjects; i++){
+        for (int i =0; i < numberOfSubjects; i++){ //fill with numberOfStudents amount of -1
             subjectGrades.add(-1);
         }
     }
@@ -19,7 +18,7 @@ public class Student {
         subjectGrades.set(index,grade);
     }
 
-    public int getSubjectGrade(int index){
+    public int getGrade(int index){
         return subjectGrades.get(index);
     }
 
@@ -27,7 +26,7 @@ public class Student {
         return name;
     }
 
-    public float getStudentAverage(){
+    public float calculateAverage(){
         int sum = 0;
         for (int i = 0; i < subjectGrades.size(); i++){
             sum += subjectGrades.get(i);
@@ -35,7 +34,7 @@ public class Student {
         return (float) sum / subjectGrades.size();
     }
 
-    @Override
+    @Override //to make printing easier bc of needing to typecast in arrays with different types of object in them
     public String toString() {
         return getName();
     }
