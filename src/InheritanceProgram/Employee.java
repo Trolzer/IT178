@@ -2,8 +2,8 @@ package InheritanceProgram;
 
 public abstract class Employee implements Payable {
 
-    private final String name;
-    private final int employeeId;
+    private String name;
+    private int employeeId;
 
     public Employee(String name, int employeeId) {
 

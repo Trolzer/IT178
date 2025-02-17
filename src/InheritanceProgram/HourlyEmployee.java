@@ -2,18 +2,14 @@ package InheritanceProgram;
 
 public class HourlyEmployee extends Employee {
 
-    private final double hourlyRate;
+    private double hourlyRate;
     private int hoursWorked = 0;
 
-    public HourlyEmployee(String name, int employeeId, double hourlyRate) {
+    public HourlyEmployee(String name, int employeeId, double hourlyRate, int hoursWorked) {
 
         super(name, employeeId);
         this.hourlyRate = hourlyRate;
-    }
-
-    public void addHours(int hours) {
-
-        hoursWorked += hours;
+        this.hoursWorked = hoursWorked;
     }
 
     @Override
@@ -26,7 +22,7 @@ public class HourlyEmployee extends Employee {
         System.out.println("Hourly Rate: $" + getHourlyRate());
         System.out.println("Hours Worked: " + getHoursWorked());
         System.out.println("Total Pay: $" + calculatePay());
-        System.out.println("-----------------------");
+
     }
 
     @Override

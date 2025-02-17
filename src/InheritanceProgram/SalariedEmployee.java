@@ -2,7 +2,7 @@ package InheritanceProgram;
 
 public class SalariedEmployee extends Employee {
 
-    private final double monthlySalary;
+    private double monthlySalary;
 
     public SalariedEmployee(String name, int employeeId, double monthlySalary) {
 
@@ -19,7 +19,7 @@ public class SalariedEmployee extends Employee {
         System.out.println("Type: Salaried Employee");
         System.out.println("Monthly Salary: $" + getMonthlySalary());
         System.out.println("Total Pay: $" + calculatePay());
-        System.out.println("-----------------------");
+
     }
 
     @Override

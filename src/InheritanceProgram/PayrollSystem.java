@@ -7,8 +7,7 @@ public class PayrollSystem {
     public static void main(String[] args) {
 
         SalariedEmployee salEmp = new SalariedEmployee("Alice Johnson", 101, 5000.00);
-        HourlyEmployee hourEmp = new HourlyEmployee("Bob Smith", 102, 20.00);
-        hourEmp.addHours(160);
+        HourlyEmployee hourEmp = new HourlyEmployee("Bob Smith", 102, 20.00, 160);
 
         ArrayList<Employee> employees = new ArrayList<>();
         employees.add(salEmp);
