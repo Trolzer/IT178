@@ -14,7 +14,7 @@ public class Student {
         }
     }
 
-    public void setSubjectGrade(int index, int grade){
+    public void setGrade(int index, int grade){
         subjectGrades.set(index,grade);
     }
 

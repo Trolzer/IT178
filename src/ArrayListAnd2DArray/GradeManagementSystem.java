@@ -64,7 +64,7 @@ public class GradeManagementSystem {
                     try {
                         System.out.print("Enter grade for " + ((Student) grades[i + 1][0]).getName() + " in " + ((Subject) grades[0][j + 1]).getSubjectName() + ": "); //wierd casting stuff here is because the array has multiple types of objects
                         int gradeVal = scanner.nextInt();
-                        ((Student) grades[i + 1][0]).setSubjectGrade(j, gradeVal);
+                        ((Student) grades[i + 1][0]).setGrade(j, gradeVal);
                         ((Subject) grades[0][j + 1]).setGrade(i, gradeVal);
                         grades[i+1][j+1] = gradeVal;
                         break;
