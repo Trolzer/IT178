@@ -1,5 +1,6 @@
 package SortingAlgorithmsProgram;
 
+import java.lang.reflect.Array;
 import java.util.Random;
 import java.util.stream.IntStream;
 
@@ -13,10 +14,14 @@ public class SortingAlgorithmMain {
 
         BubbleSort bubbleSort = new BubbleSort(arrayInt100);
         SelectionSort selectionSort = new SelectionSort(arrayInt100);
+        InsertionSort insertionSort = new InsertionSort(arrayInt100);
+        MergeSort mergeSort = new MergeSort(arrayInt100);
+        QuickSort quickSort = new QuickSort(arrayInt100);
 
-        selectionSort.printElements();
-        selectionSort.sort();
-        selectionSort.printElements();
+        quickSort.printElements();
+        quickSort.sort();
+        quickSort.printElements();
+
 
     }
 
