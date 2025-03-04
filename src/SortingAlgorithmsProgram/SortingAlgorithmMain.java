@@ -1,9 +1,6 @@
 package SortingAlgorithmsProgram;
 
-import javax.crypto.Cipher;
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.stream.IntStream;
 
 public class SortingAlgorithmMain {
 
@@ -23,6 +20,19 @@ public class SortingAlgorithmMain {
             int[] arrayInt10000Sorted = Arrays.copyOf(arrayInt10000, 10000);
             Arrays.sort(arrayInt10000Sorted);
 
+            //100,1000,10000 arrays in reverse order
+            int[] arrayInt100Reverse = Arrays.copyOf(arrayInt100Sorted,100);
+            reverseArray(arrayInt100Reverse);
+            int[] arrayInt1000Reverse = Arrays.copyOf(arrayInt1000Sorted, 1000);
+            reverseArray(arrayInt1000Reverse);
+            int[] arrayInt10000Reverse = Arrays.copyOf(arrayInt10000Sorted, 10000);
+            reverseArray(arrayInt10000Reverse);
+
+            //100,1000,10000 arrays with duplicates
+            int[] arrayInt100Dupes = new Random().ints(100,0,11).toArray();
+            int[] arrayInt1000Dupes = new Random().ints(1000,0,101).toArray();
+            int[] arrayInt10000Dupes = new Random().ints(10000,0,1001).toArray();
+
 
         //sort timing
             testSorts(arrayInt100);
@@ -34,6 +44,18 @@ public class SortingAlgorithmMain {
             testSorts(arrayInt100Sorted);
             testSorts(arrayInt1000Sorted);
             testSorts(arrayInt10000Sorted);
+
+            //test with reversed arrays
+            System.out.println("------------REVERSE ARRAY TEST------------");
+            testSorts(arrayInt100Reverse);
+            testSorts(arrayInt1000Reverse);
+            testSorts(arrayInt10000Reverse);
+
+            //test with many duplicates
+            System.out.println("------------DUPLICATE ARRAY TEST------------");
+            testSorts(arrayInt100Dupes);
+            testSorts(arrayInt1000Dupes);
+            testSorts(arrayInt10000Dupes);
 
 
 
@@ -80,5 +102,14 @@ public class SortingAlgorithmMain {
 
 
 
+    }
+
+    //helper for making reversed arrays
+    public static void reverseArray(int[] arr){
+        for (int i = 0; i < arr.length / 2; i++){
+            int temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
     }
 }
